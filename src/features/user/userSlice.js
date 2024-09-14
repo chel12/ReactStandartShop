@@ -18,7 +18,7 @@ export const createUser = createAsyncThunk(
 const userSlice = createSlice({
 	name: 'user',
 	initialState: {
-		currentUser: {},
+		currentUser: null,
 		cart: [],
 		isLoading: false,
 		formType: 'signup',
@@ -40,9 +40,9 @@ const userSlice = createSlice({
 			} else newCart.push({ ...payload, quantity: 1 });
 			state.cart = newCart;
 		},
-		toggleForm:(state,{payload})=>{
-			state.showForm = payload
-		}
+		toggleForm: (state, { payload }) => {
+			state.showForm = payload;
+		},
 	},
 	extraReducers: (builder) => {
 		builder.addCase(createUser.fulfilled, (state, { payload }) => {
