@@ -1,11 +1,11 @@
 :root {
-  --bg: #212123;
-  --dark: #191919;
+  --bg: #12514a86;
+  --dark: #bff5dd88;
   --dark-sea: #576067;
-  --grey: #b8b8b8;
-  --white: #fff;
-  --violet: #8b57c6;
-  --violet-dark: #6c3eb8;
-  --light: #f6f6f7;
-  --sea: #616e74;
+  --grey: #e1f907b9;
+  --white: #ffffff;
+  --violet: #578bc6;
+  --violet-dark: #3e56b8;
+  --light: #e1f907b9;
+  --sea: #e1f907b9;
 }
