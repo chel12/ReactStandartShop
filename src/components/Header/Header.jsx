@@ -17,7 +17,6 @@ const Header = () => {
 	const [values, setValues] = useState({ name: 'Guest', avatar: AVATAR });
 	const { data, isLoading } = useGetProductsQuery({ title: searchValue });
 	const { currentUser } = useSelector(({ user }) => user);
-	console.log(data);
 	const handleClick = () => {
 		if (!currentUser) dispatch(toggleForm(true));
 		else navigate(ROUTES.PROFILE);

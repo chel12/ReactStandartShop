@@ -4,12 +4,14 @@ import Home from '../Home/Home';
 import { ROUTES } from '../../utils/routes';
 import SingleProducts from '../Products/SingleProducts';
 import Profile from '../Profile/Profile';
+import SingleCategory from '../Categories/SingleCategory';
 
 const AppRoutes = () => (
 	<Routes>
-		<Route index element={<Home />}></Route>
-		<Route path={ROUTES.PRODUCT} element={<SingleProducts />}></Route>
-		<Route path={ROUTES.PROFILE} element={<Profile />}></Route>
+		<Route index element={<Home />} />
+		<Route path={ROUTES.PRODUCT} element={<SingleProducts />} />
+		<Route path={ROUTES.PROFILE} element={<Profile />} />
+		<Route path={ROUTES.CATEGORY} element={<SingleCategory />} />
 	</Routes>
 );
 
