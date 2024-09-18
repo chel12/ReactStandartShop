@@ -4,13 +4,14 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 const Sidebar = () => {
 	const { list } = useSelector(({ categories }) => categories);
+	const categories = list.filter((_, i) => i < 11);
 
 	return (
 		<section className={styles.sidebar}>
 			<div className={styles.title}>CATEGORIES</div>
 			<nav>
 				<ul className={styles.menu}>
-					{list.map(({ id, name }) => (
+					{categories.map(({ id, name }) => (
 						<li key={id}>
 							<NavLink
 								className={({ isActive }) =>
@@ -25,19 +26,6 @@ const Sidebar = () => {
 					))}
 				</ul>
 			</nav>
-
-			<div className={styles.footer}>
-				<a href="/help" target="_blank" className={styles.link}>
-					help
-				</a>
-				<a
-					href="/terms"
-					target="_blank"
-					className={styles.link}
-					style={{ textDecoration: 'underline' }}>
-					Terms & Conditions
-				</a>
-			</div>
 		</section>
 	);
 };

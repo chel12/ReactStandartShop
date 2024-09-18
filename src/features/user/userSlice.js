@@ -74,6 +74,10 @@ const userSlice = createSlice({
 			} else newCart.push({ ...payload, quantity: 1 });
 			state.cart = newCart;
 		},
+		removeItemFromCart: (state, { payload }) => {
+			state.cart = state.cart.filter(({ id }) => id !== payload);
+		},
+
 		toggleForm: (state, { payload }) => {
 			state.showForm = payload;
 		},
@@ -87,5 +91,6 @@ const userSlice = createSlice({
 		builder.addCase(updateUser.fulfilled, addCurrentUser);
 	},
 });
-export const { addItemToCart, toggleForm, toggleFormType } = userSlice.actions;
+export const { addItemToCart, toggleForm, toggleFormType, removeItemFromCart } =
+	userSlice.actions;
 export default userSlice.reducer;

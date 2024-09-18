@@ -77,15 +77,16 @@
   height: 170px;
   left: -25px;
   bottom: 74px;
-  background: url(../images/shoe.png) no-repeat center/contain;
+  background: url(../images/crem.png) no-repeat center/contain;
 }
 
 .left:after {
   width: 269px;
   height: 151px;
   right: -25px;
-  bottom: -25px;
-  background: url(../images/devices.png) no-repeat center/contain;
+  bottom: -5px;
+  transform:rotate(25deg);
+  background: url(../images/hand.png) no-repeat center/contain;
 }
 
 .content {

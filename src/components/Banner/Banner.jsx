@@ -15,7 +15,11 @@ const Banner = () => {
 
 			<div
 				className={styles.right}
-				style={{ backgroundImage: `url(${bannerImg})` }}>
+				style={{
+					backgroundImage: `url(${bannerImg})`,
+					backgroundRepeat: 'no-repeat',
+					backgroundPosition: 'center',
+				}}>
 				<p className={styles.discount}>
 					save up to <span>50%</span> off
 				</p>
